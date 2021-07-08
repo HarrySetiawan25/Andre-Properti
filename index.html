@@ -108,7 +108,10 @@
                      >
                      <a class="nav-item nav-link" href="#facility">Fasilitas</a>
                      <a class="nav-item nav-link" href="#penawaran">Promo</a>
-                     <a class="nav-item btn btn-primary tombol" href="#contact"
+                     <a
+                        class="nav-item btn btn-primary tombol"
+                        href="https://api.whatsapp.com/send?phone=6281388321129&text=Halo,%20saya%20tertarik%20dengan%20penawaran%20anda%20untuk%20perumahan%20duta%20indah%20residence.%20Saya%20ingin%20mengetahuinya%20lebih%20lanjut."
+                        target="_blank"
                         >Contact Us</a
                      >
                   </div>
@@ -134,6 +137,15 @@
             </div>
          </div>
          <!-- End of Jumbotron -->
+
+         <div class="whatsapp-button">
+            <a
+               href="https://api.whatsapp.com/send?phone=6281388321129&text=Halo,%20saya%20tertarik%20dengan%20penawaran%20anda%20untuk%20perumahan%20duta%20indah%20residence.%20Saya%20ingin%20mengetahuinya%20lebih%20lanjut."
+               target="_blank"
+            >
+               <img src="assets/icon/whatsapp.svg" alt=""
+            /></a>
+         </div>
 
          <!-- Logo -->
          <div class="container text-center logo">
@@ -339,7 +351,12 @@
                            role="tablist"
                         >
                            <a
-                              class="flex-sm-fill text-sm-center nav-link active"
+                              class="
+                                 flex-sm-fill
+                                 text-sm-center
+                                 nav-link
+                                 active
+                              "
                               id="nav-alexandrite-60-tab"
                               data-toggle="tab"
                               href="#nav-alexandrite-60"
@@ -443,7 +460,12 @@
                            role="tablist"
                         >
                            <a
-                              class="flex-sm-fill text-sm-center nav-link active"
+                              class="
+                                 flex-sm-fill
+                                 text-sm-center
+                                 nav-link
+                                 active
+                              "
                               id="nav-beryl-bl-1-tab"
                               data-toggle="tab"
                               href="#nav-beryl-bl-1"
@@ -618,7 +640,7 @@
          <!-- End of Penawaran -->
 
          <!-- Contact -->
-         <section id="contact" class="d-flex justify-content-center">
+         <!-- <section id="contact" class="d-flex justify-content-center">
             <div class="container d-flex flex-column">
                <h2 class="h1 text-center font-weight-bold">Hubungi Kami</h2>
                <form name="contact-form" class="align-self-center">
@@ -662,7 +684,7 @@
                   </button>
                </form>
             </div>
-         </section>
+         </section> -->
          <!-- End of Contact -->
          <!-- ======= Footer ======= -->
          <footer id="footer">
@@ -683,35 +705,35 @@
       <script src="assets/js/bootstrap-validate.js"></script>
       <script src="assets/js/main.js"></script>
       <script>
-         bootstrapValidate("#nama", "required:Nama tidak boleh kosong");
-         bootstrapValidate(
-            "#nomorhp",
-            "regex:^628[1-9][0-9][0-9][0-9][0-9][0-9][0-9]+$:Nomor Handphone tidak valid"
-         );
+         // bootstrapValidate("#nama", "required:Nama tidak boleh kosong");
+         // bootstrapValidate(
+         //    "#nomorhp",
+         //    "regex:^628[1-9][0-9][0-9][0-9][0-9][0-9][0-9]+$:Nomor Handphone tidak valid"
+         // );
 
-         const scriptURL =
-            "https://script.google.com/macros/s/AKfycbxhQgiChHX2WWq2gdPd9uxVzhFm8wPd99i12vg0YWwNS0ETJ6PeLsQInw9yCeqbOD-j/exec";
-         const form = document.forms["contact-form"];
-         const btnKlik = document.querySelector(".btn-klik");
-         const btnLoading = document.querySelector(".btn-loading");
+         // const scriptURL =
+         //    "https://script.google.com/macros/s/AKfycbxhQgiChHX2WWq2gdPd9uxVzhFm8wPd99i12vg0YWwNS0ETJ6PeLsQInw9yCeqbOD-j/exec";
+         // const form = document.forms["contact-form"];
+         // const btnKlik = document.querySelector(".btn-klik");
+         // const btnLoading = document.querySelector(".btn-loading");
 
-         form.addEventListener("submit", (e) => {
-            btnKlik.classList.toggle("d-none");
-            btnLoading.classList.toggle("d-none");
-            e.preventDefault();
-            fetch(scriptURL, { method: "POST", body: new FormData(form) })
-               .then((response) => {
-                  window.open(
-                     "https://api.whatsapp.com/send?phone=6281388321129&text=Halo,%20saya%20tertarik%20dengan%20penawaran%20anda%20untuk%20perumahan%20duta%20indah%20residence.%20Saya%20ingin%20mengetahuinya%20lebih%20lanjut.",
-                     "_blank"
-                  );
-                  btnKlik.classList.toggle("d-none");
-                  btnLoading.classList.toggle("d-none");
-                  console.log("Success!", response);
-                  form.reset();
-               })
-               .catch((error) => console.error("Error!", error.message));
-         });
+         // form.addEventListener("submit", (e) => {
+         //    btnKlik.classList.toggle("d-none");
+         //    btnLoading.classList.toggle("d-none");
+         //    e.preventDefault();
+         //    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+         //       .then((response) => {
+         //          window.open(
+         //             "https://api.whatsapp.com/send?phone=6281388321129&text=Halo,%20saya%20tertarik%20dengan%20penawaran%20anda%20untuk%20perumahan%20duta%20indah%20residence.%20Saya%20ingin%20mengetahuinya%20lebih%20lanjut.",
+         //             "_blank"
+         //          );
+         //          btnKlik.classList.toggle("d-none");
+         //          btnLoading.classList.toggle("d-none");
+         //          console.log("Success!", response);
+         //          form.reset();
+         //       })
+         //       .catch((error) => console.error("Error!", error.message));
+         // });
       </script>
    </body>
 </html>
